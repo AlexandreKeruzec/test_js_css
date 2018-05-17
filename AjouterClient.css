@@ -1,0 +1,29 @@
+body {
+  font-family: Helvetica;
+  background: #EFECCA;
+}
+h1 {
+  color: #C03000;
+}
+h2{
+  color: #4BB5C1;
+}
+a{
+  color: #96CA2D;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  width: 300px;
+}
+li {
+  margin: 10px;
+}
+input {
+  border-radius: 5px;
+  float: right;
+}
+[type=submit]{
+  background: red;
+  color: white;
+}

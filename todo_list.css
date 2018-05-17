@@ -1,0 +1,34 @@
+.content {
+  color : white;
+  background : blue;
+  width : 30%;
+  margin : auto;
+  text-align : center;
+  font-family : Helvetica;
+  padding : 16px;
+}
+.content > #todolist {
+  list-style-type: none;
+  width : 50%;
+  margin : auto 10%;
+  padding-bottom: 25px;
+}
+.content > #todolist > li {
+  color : black;
+  background : white;
+  webkit-border-radius : 5px;
+  moz-border-radius : 5px;
+  border-radius :  5px;
+  padding : 10px;
+  margin : 2%;
+}
+#todotxt {
+  webkit-border-radius : 3px;
+  moz-border-radius : 3px;
+  border-radius :  3px;
+}
+#addtodo {
+  webkit-border-radius : 5px;
+  moz-border-radius : 5px;
+  border-radius :  5px;
+}

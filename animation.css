@@ -1,0 +1,19 @@
+.box {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.box:hover{
+  width: 200px;
+}
+
+@keyframes rotate {
+  from{transform: rotateZ();background: red}
+  to{transform: rotateZ(360deg);background: blue}
+}

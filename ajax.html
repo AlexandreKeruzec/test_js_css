@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX</title>
+</head>
+<body>
+  <table id="userList">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Password</th>
+    </tr>
+  </table>
+
+  <form>
+    <input id="id" type="text"/><br />
+    <input id="name" type="text" required/><br />
+    <input id="password" type="text" required/><br />
+    <input id="add" type="button" value="ajouter"/>
+  </form>
+
+  <script>
+    function afterResultLoad() {
+       users = JSON.parse(xhttp.responseText);
+       for(i=0;i<users.length;i++){
+         var tr = document.createElement("tr");
+         var td1 = document.createElement("td");
+         var textTd1 = document.createTextNode(users[i].id);
+         td1.appendChild(textTd1);
+         tr.appendChild(td1);
+         var td2 = document.createElement("td");
+         var textTd2 = document.createTextNode(users[i].name);
+         td2.appendChild(textTd2);
+         tr.appendChild(td2)
+         var td3 = document.createElement("td");
+         var textTd3 = document.createTextNode(users[i].password);
+         td3.appendChild(textTd3);
+         tr.appendChild(td3)
+         document.getElementById("userList").appendChild(tr);
+       }
+    }
+    var xhttp = new XMLHttpRequest();
+    xhttp.onload = afterResultLoad;
+    xhttp.open("GET","http://loisirs-web-backend.cleverapps.io/users/", true);
+    xhttp.send();
+
+    document.getElementById("add").onclick=addUser;
+
+    function addUser(){
+      var id = document.getElementById("id").value;
+      var name = document.getElementById("name").value;
+      var pwd = document.getElementById("password").value;
+      //var user = {"id":id, "name":name, "password":pwd};
+      var user = {"id":document.getElementById("id").value, "name":document.getElementById("name").value, "password":document.getElementById("password").value};
+      var xhttpSend = new XMLHttpRequest();
+      xhttpSend.open("POST","http://loisirs-web-backend.cleverapps.io/users/", true);
+      xhttpSend.setRequestHeader("Content-type", "application/json");
+      xhttpSend.send(JSON.stringify(user));
+    }
+  </script>
+</body>
+</html>

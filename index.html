@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+	<body>
+		<script type="text/javascript">
+		/*
+			console.log( "Objet : ", { nom : "DOE", "prenom" : "John"});
+			console.log( "Tableau : ", new Array("Val1", "Val2"));
+			console.log( "Variable : ", "val 1");
+			function test(){
+				alert("ok");
+			}
+			console.log( "Fonction : ", test);
+			*/
+		</script>
+		<script type="text/javascript">
+		/*
+		  var b = "4";
+			var a = "12";
+		  function MultipliePar2(b){
+				a = parseInt(b)*2;
+				return a;
+			}
+			document.write("le double de ",b," est ",MultipliePar2(b),"<br/>");
+			document.write("la valeur de a est ",a);
+			*/
+		</script>
+		<script type="text/javascript">
+		/*
+			document.write('<table border="1" width="200"><caption>Je suis un titre de tableau :-)</caption><tr>');
+			for(i=1;i<13;i++){
+				if(i%4==1){
+					document.write("</tr><tr>");
+				}
+				document.write('<td align="center">',i,'</td>');
+			}
+			document.write("</tr></table>")
+			*/
+		</script>
+		<script type="text/javascript">
+		/*
+			var tab={"anatole":19, "bernard":45, "christophe":34, "dominique":55,
+							 "franck":28, "georges":78, "lucas":12, "madeleine":30, "pierre":25};
+			function getFormData(){
+				var prenom=document.getElementById('prenom').value;
+				var age=tab[prenom];
+				if(typeof age == "undefined"){
+					alert("pas d'utilisateur " + prenom.charAt(0).toUpperCase() + prenom.substring(1));
+				}
+				else {alert(prenom.charAt(0).toUpperCase() + prenom.substring(1) + " a " + age + " ans.");}
+			}
+			document.write('<form method="post" action="#" onsubmit="getFormData()"><input type="text" name="prenom" id="prenom" required></input>')
+			document.write('<input type="submit" value="Quel age as-tu ?"></input>')
+			document.write('</form>')
+			*/
+		</script>
+		<script>
+		/*
+		  var notes = [15,12,18,14,16,16,19,13,11,10,16,15];
+			var somme=0;
+			for(i=0;i<notes.length;i++){
+				somme+=parseInt(notes[i]);
+			}
+			var moyenne = (somme/notes.length).toFixed(2);
+			document.write('La moyenne vaut ' + moyenne);
+			*/
+		</script>
+		<script>
+		/*
+			function divColor(c){document.getElementById('monDiv').style.backgroundColor=c;}
+			document.write("<form><input type='button' value='Rouge' onclick='divColor(\"red\")'/>");
+			document.write("<input type='button' value='Vert' onclick='divColor(\"green\")'/>");
+			document.write("<input type='button' value='Bleu' onclick='divColor(\"blue\")'/></form>");
+			//document.write("<form><input type='button' name='Rouge' value='Rouge'/>");
+			//document.write("<input type='button' name='Vert' value='Vert'/>");
+			//document.write("<input type='button' name='Bleu' value='Bleu'/></form>");
+			document.write("<div id='monDiv' style='height:150px;width:150px;background-color:black'></div>");
+			//document.getElementById('Rouge').onclick=divColor("red");
+			//document.getElementById('Vert').onclick=divColor("green");
+			//document.getElementById('Bleu').onclick=divColor("blue");
+		*/
+		</script>
+	</body>
+</html>
